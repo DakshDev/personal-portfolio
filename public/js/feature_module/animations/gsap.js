@@ -4,6 +4,39 @@ const menuBox_li = document.querySelectorAll("#menuBox li");
 const menuBox_a = document.querySelectorAll("#menuBox a");
 let menu_flag = true;
 
+
+
+
+// PAGE LOADER
+window.addEventListener("load", (e) => {
+    pageSectionAnimation();
+    setTimeout(() => {
+        let loaderBox = document.getElementById("loader_box");
+        let new_tl = gsap.timeline();
+        new_tl.to(loaderBox.children, {
+            opacity: 0,
+            scale: 0.5,
+            duration: 0.5,
+            stagger: 0.3,
+        })
+        new_tl.to(loaderBox, {
+            opacity: 0,
+            duration: 1,
+        })
+
+    setTimeout(() => {
+        loaderBox.innerHTML = "";
+        loaderBox.style.display = "none";
+    },1500)
+    }, 500)
+});
+
+
+
+
+
+
+
 // nav box open and close animation triggered by bar btn
 (()=>{
 
@@ -95,10 +128,77 @@ function conditionCheck(){
 
 
 
-// Project Section animate ececute by scroll triggered
-let project_created_tl = gsap.timeline();
+// Span Animation opacity and bottom to up
+class SplitText {
+    constructor (node) {
+        this.node = node;
+    }
 
-(()=>{
+    split(){
+        let nodeElm = document.querySelector(`${this.node}`);
+        nodeElm.style.cssText += "display: flex; flex-wrap: wrap; gap: 0px 5px";
+        let splitNodes = nodeElm.innerText.split(" ");  
+        nodeElm.innerHTML = "";
+        splitNodes.forEach((char) => {
+            const span = document.createElement("span");
+            const br = document.createElement("br");
+            span.textContent = char;
+            nodeElm.appendChild(span);
+        });
+    }
+}
+
+
+// Page Section animattion by scroll triggered
+const pageSectionAnimation = () => {
+    let page1_tl = gsap.timeline();
+    
+    // page 1
+    page1_tl.from("[page1_animation] h2", {
+        delay: 2,
+        y: "25px",
+        transform: `rotateZ(5deg)`,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.3,
+    });
+    new SplitText("[page1_animation] p", ).split();
+    page1_tl.from("[page1_animation] p span", {
+        x: "10px",
+        y: "10px",
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.4,
+    });
+    document.querySelectorAll("[page1_animation_button_box] .primary-button")
+    .forEach(e => e.style.cssText += "opacity: 0; scale: 0.8; transform: translateY(10px)");
+    page1_tl.to("[page1_animation_button_box] .primary-button", {
+        y: "0px",
+        opacity: 1,
+        scale: 1,
+        stagger: 0.3,
+        duration: 0.6,
+    });
+    page1_tl.from("[page1_animation_2] > div", {
+        x: "25px",
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+    });
+    document.querySelector("[menuBar]").style.cssText += "opacity: 0;"
+    page1_tl.to("[menuBar]", {
+        opacity: 1,
+    });
+
+
+
+    // page 2
+
+
+
+
+
+
 
     // page 4
     gsap.to("#page4 h1",{
@@ -114,20 +214,4 @@ let project_created_tl = gsap.timeline();
         }
     });
 
-})();
-
-
-
-
-
-
-
-
-
-
-
-// loader
-let loader_tl = gsap.timeline();
-window.addEventListener("load",()=>{
-    // here load exec
-});
+};

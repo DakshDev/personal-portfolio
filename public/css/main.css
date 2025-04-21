@@ -220,7 +220,8 @@ textarea::placeholder{
 }
 .mainHeading:hover span:nth-child(2) {
   width:0%;
-  filter: drop-shadow(0 0 1px var(--animation-color))
+  filter: drop-shadow(0 0 1px var(--animation-color));
+  
 }
 
 /* Primary Button */
