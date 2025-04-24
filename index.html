@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daksh Developer</title>
-  <link rel="stylesheet" href="/css/loader.css">
+  <link rel="stylesheet" href="/css/loader-and-cursor.css">
   <link rel="stylesheet" href="/css/dest/output.css">
 </head>
 <body class="dark_theme bg-black_one_clr overflow-x-hidden font_md poppins-regular">
-  
-
-
 
   <!-- Loader -->
   <div id="loader_box">
@@ -19,6 +16,10 @@
     </div>
     <div class="loader"></div>
   </div>
+
+
+  <!-- Cursor -->
+   <div id="cursor_box"><span></span></div>
 
 
   
@@ -44,7 +45,7 @@
     <!-- ============================================== -->
     <div id="page1" class="mainBoxDefaulStyle min-h-screen overflow-hidden relative">
       <!-- menu open and close bar -->
-      <div class="fixed right-5 top-5 size-12 rounded-md z-50 p-1.5 hover:bg-pri_clr active:opacity-80 transition-all duration-300 cursor-pointer" menuBar></div>
+      <div class="fixed right-5 top-5 size-12 rounded-md z-50 p-1.5 hover:bg-pri_clr active:opacity-80 transition-all duration-300 cursor-pointer opacity-0" menuBar page1_animation_menuBar></div>
       <!-- menu box -->
       <div id="menuBox" class="overflow-x-hidden h-screen bg-black_two_clr fixed top-0 right-0 -translate-x-[-600px] grid content-center gap-40 p-20 pt-28 max-sm:content-between max-sm:gap-10 max-sm:px-10 z-40  md:w-[500px] sm:w-[400px] w-[350px]">     
         <!-- absolute background box for back black shade -->
@@ -140,33 +141,32 @@
       <div><span class="common_heading">About Me</span></div>
       <!-- Main -->
       <div class="grid lg:grid-cols-3 lg:gap-10 gap-5">
-        <div class="w-full lg:col-span-2 grid gap-5 content-start relative">
-          <p class="montserrat_regular">Hi, My name is <span class="montserrat_regular">Daksh Kishore</span>, I reside in Pakistan. A professional and experienced Front-end developer With 2+ year of experience.</p>
+        <div id="about_animation_left_box" class="w-full lg:col-span-2 grid gap-5 content-start relative">
+          <p about_animation_left class="montserrat_regular">Hi, My name is Daksh Kishore, I reside in Pakistan. A professional and experienced Front-end developer With 2+ year of experience.</p>
           <div class="grid gap-2">
-            <h2 class="font_lg uppercase text-pri_clr poppins-bold">web Developer</h2>
-            <p class="montserrat_regular">With two years of front-end web development experience, I bring a strong skill set to creating dynamic and responsive front-end websites. My journey began with mastering HTML, CSS, JavaScript and some Frameworks/Liberary, where I improved my skills in crafting user interfaces.</p>
+            <h2 about_animation_left class="font_lg uppercase text-pri_clr poppins-bold">web Developer</h2>
+             <p about_animation_left class="montserrat_regular">With two years of front-end web development experience, I bring a strong skill set to creating dynamic and responsive front-end websites. My journey began with mastering HTML, CSS, JavaScript and some Frameworks/Liberary, where I improved my skills in crafting user interfaces.</p>
           </div>
           <div class="grid gap-2">
-            <h2 class="font_lg uppercase text-pri_clr poppins-bold">Education</h2>
+            <h2 about_animation_left class="font_lg uppercase text-pri_clr poppins-bold">Education</h2>
             <div class="grid gap-1">
-              <p class="poppins-semibold">Matriculation</p>
-              <p class="font-[600]">Board : <span class="text-text_two_clr">sindh board</span></p>
-              <p class="font-[600]">Year of Completion : <span class="text-text_two_clr">2024/2025</span></p>
-              <p class="font-[600]">Group : <span class="text-text_two_clr">computer science</span></p>
+              <p about_animation_left class="poppins-semibold">Matriculation</p>
+              <p about_animation_left class="font-[600]">Year of Completion : <span class="text-text_two_clr">2024/2025</span></p>
+              <p about_animation_left class="font-[600]">Group : <span class="text-text_two_clr">computer science</span></p>
             </div>
           </div>
-          <div class="w-[2px] h-[80%] bg-black_two_clr absolute right-[-20px] top-[50%] translate-y-[-50%]"></div>
+          <div about_animation_middle_line class="w-[2px] h-[80%] bg-black_two_clr absolute right-[-20px] top-[50%] translate-y-[-50%]"></div>
         </div>
-        <div class="w-full grid gap-2 content-start">
-          <h2 class="font_lg uppercase text-pri_clr poppins-bold">Personal Info</h2>
+        <div id="about_animation_right_box" class="w-full grid gap-2 content-start">
+          <h2 about_animation_right class="font_lg uppercase text-pri_clr poppins-bold">Personal Info</h2>
           <div class="grid gap-1">
-            <p class="font-[600]">Name : <span class="font-normal text-text_two_clr">Daksh Kishore</span></p>
-            <p class="font-[600]">Birth : <span class="font-normal text-text_two_clr">Aug/25/2007</span></p>
-            <p class="font-[600]">Residence : <span class="font-normal text-text_two_clr">Pakistan</span></p>
-            <p class="font-[600]">State : <span class="font-normal text-text_two_clr">Sindh</span></p>
-            <p class="font-[600]">Email : <span class="font-normal text-text_two_clr">dakshkishore99@outlook.com</span></p>
-            <p class="font-[600]">Phone : <span class="font-normal text-text_two_clr">+92-1234-56789</span></p>
-            <p class="font-[600]">Freelance : <span class="font-normal text-text_two_clr">Soon</span></p>
+            <p about_animation_right class="font-[600]">Name : <span class="font-normal text-text_two_clr">Daksh Kishore</span></p>
+            <p about_animation_right class="font-[600]">Birth : <span class="font-normal text-text_two_clr">Aug/25/2007</span></p>
+            <p about_animation_right class="font-[600]">Residence : <span class="font-normal text-text_two_clr">Pakistan</span></p>
+            <p about_animation_right class="font-[600]">State : <span class="font-normal text-text_two_clr">Sindh</span></p>
+            <p about_animation_right class="font-[600]">Email : <span class="font-normal text-text_two_clr">dakshkishore99@outlook.com</span></p>
+            <p about_animation_right class="font-[600]">Phone : <span class="font-normal text-text_two_clr">+92-1234-56789</span></p>
+            <p about_animation_right class="font-[600]">Freelance : <span class="font-normal text-text_two_clr">Soon</span></p>
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@
       <!-- Commo Heading -->
       <div><span class="common_heading">My Stacks</span></div>
       <!-- main -->
-      <div tech_stack_box class="flex justify-center flex-wrap gap-2.5 content-start">
+      <div stack_animation tech_stack_box class="flex justify-center flex-wrap gap-2.5 content-start">
         <!-- Here Tech Stack Import From Svg.js file -->
       </div>
     </div>
@@ -268,8 +268,6 @@
       </div>
     </footer>
 
-
-
   </div>
 
 
@@ -312,6 +310,17 @@
       pagination: {
         el: ".swiper-pagination",
       },
+    });
+
+    // Cursor Moving Effect
+    let cursor_main = document.getElementById("cursor_box");
+    window.addEventListener("mousemove", (e) => {
+      cursor_main.style.display = "inline-block";
+      cursor_main.style.left = `${e.clientX}px`;
+      cursor_main.style.top = `${e.clientY}px`;
+    });
+    window.addEventListener("mouseout", (e) => {
+      cursor_main.style.display = "none";
     });
   </script>
 </body>

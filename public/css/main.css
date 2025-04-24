@@ -19,6 +19,7 @@
     margin: 0;
     box-sizing: border-box;
     color: var(--text-one-clr);
+    cursor: grab !important;
 }
 html,body{
   scroll-behavior: smooth;

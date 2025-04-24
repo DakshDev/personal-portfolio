@@ -12,14 +12,12 @@ window.addEventListener("load", (e) => {
     pageSectionAnimation();
     setTimeout(() => {
         let loaderBox = document.getElementById("loader_box");
-        let new_tl = gsap.timeline();
-        new_tl.to(loaderBox.children, {
+        gsap.to(loaderBox.children, {
             opacity: 0,
             scale: 0.5,
-            duration: 0.5,
-            stagger: 0.3,
+            duration: 1,
         })
-        new_tl.to(loaderBox, {
+        gsap.to(loaderBox, {
             opacity: 0,
             duration: 1,
         })
@@ -152,10 +150,10 @@ class SplitText {
 // Page Section animattion by scroll triggered
 const pageSectionAnimation = () => {
     let page1_tl = gsap.timeline();
-    
+
     // page 1
     page1_tl.from("[page1_animation] h2", {
-        delay: 2,
+        delay: 1.5,
         y: "25px",
         transform: `rotateZ(5deg)`,
         opacity: 0,
@@ -176,7 +174,7 @@ const pageSectionAnimation = () => {
         y: "0px",
         opacity: 1,
         scale: 1,
-        stagger: 0.3,
+        stagger: 0.2,
         duration: 0.6,
     });
     page1_tl.from("[page1_animation_2] > div", {
@@ -185,17 +183,85 @@ const pageSectionAnimation = () => {
         duration: 0.6,
         stagger: 0.2,
     });
-    document.querySelector("[menuBar]").style.cssText += "opacity: 0;"
-    page1_tl.to("[menuBar]", {
+    page1_tl.to("#page1 [page1_animation_menuBar]", {
         opacity: 1,
     });
 
 
 
     // page 2
+    gsap.from("#about span.common_heading", {
+        opacity: 0,
+        top: "50px",
+        scrollTrigger: {
+            trigger: "#about",
+            // markers: true,
+            start: 'top 50%',
+            end: 'top 25%',
+            scrub: 1,
+        }
+    });
+    gsap.from("#about [about_animation_left]",{
+        opacity: 0,
+        y: "10px",
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#about #about_animation_left_box",
+            // markers: true,
+            start: 'top 60%',
+            end: 'top 40%',
+            scrub: 1,
+        }
+    });
+    gsap.from("#about #about_animation_right_box [about_animation_right]",{
+        opacity: 0,
+        y: "10px",
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#about #about_animation_right_box",
+            // markers: true,
+            start: 'top 60%',
+            end: 'top 40%',
+            scrub: 1,
+        }
+    });
+    gsap.from("#about [about_animation_middle_line]", {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#about #about_animation_right_box",
+            // markers: true,
+            start: 'top 60%',
+            end: 'top 40%',
+            scrub: 1,
+        }
+    });
 
 
 
+    
+
+    // page 3
+    gsap.from("#stack span.common_heading", {
+        opacity: 0,
+        top: "50px",
+        scrollTrigger: {
+            trigger: "#stack",
+            // markers: true,
+            start: 'top 50%',
+            end: 'top 25%',
+            scrub: 1,
+        }
+    });
+    gsap.from("#stack [stack_animation]", {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#stack",
+            // markers: true,
+            start: 'top 25%',
+            end: 'top 10%',
+            scrub: 1,
+        }
+    });
 
 
 
