@@ -1,7 +1,3 @@
-
-
-
-
 function user_passed_contact_info(callback){
        
     const firstName = document.getElementById("userFirstName");
@@ -38,6 +34,5 @@ function user_passed_contact_info(callback){
     });
 
 }
-
 
 export {user_passed_contact_info};

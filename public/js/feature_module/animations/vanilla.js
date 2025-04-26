@@ -75,5 +75,3 @@ function background_particle_animation(){
 
 }
 background_particle_animation();
-
-

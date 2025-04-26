@@ -8,7 +8,7 @@ let menu_flag = true;
 
 
 // PAGE LOADER
-window.addEventListener("load", (e) => {
+window.addEventListener("DOMContentLoaded", (e) => {
     pageSectionAnimation();
     setTimeout(() => {
         let loaderBox = document.getElementById("loader_box");
@@ -54,7 +54,7 @@ blury_bg.style.display = "hidden";
 
 // Blury Background Event
 blury_bg.addEventListener("click",()=>{
-    gsap.to("#menuBox div *",{
+    gsap.to("#menuBox div",{
         opacity: 0,
         duration: 0.5,
     })
@@ -98,7 +98,7 @@ function conditionCheck(){
         gsap.to("#menuBox div",{
             opacity: 1,
             duration: 0.5,
-        })
+        });
         menu_flag = false;
         blury_bg.style.display = "block";
     }else{
@@ -115,8 +115,6 @@ function conditionCheck(){
         blury_bg.style.display = "none";
     }
 }
-
-
 
 })();
 
@@ -150,7 +148,6 @@ class SplitText {
 // Page Section animattion by scroll triggered
 const pageSectionAnimation = () => {
     let page1_tl = gsap.timeline();
-
     // page 1
     page1_tl.from("[page1_animation] h2", {
         delay: 1.5,
@@ -186,7 +183,6 @@ const pageSectionAnimation = () => {
     page1_tl.to("#page1 [page1_animation_menuBar]", {
         opacity: 1,
     });
-
 
 
     // page 2
@@ -237,9 +233,6 @@ const pageSectionAnimation = () => {
     });
 
 
-
-    
-
     // page 3
     gsap.from("#stack span.common_heading", {
         opacity: 0,
@@ -264,8 +257,6 @@ const pageSectionAnimation = () => {
     });
 
 
-
-
     // page 4
     gsap.to("#page4 h1",{
         x: "-80%",
@@ -281,7 +272,6 @@ const pageSectionAnimation = () => {
     });
 
 
- 
     // page 5
     gsap.from(document.querySelector("[page5_right_arrow]").children,{
         y: "25px",
@@ -304,7 +294,6 @@ const pageSectionAnimation = () => {
             scrub: 1,
         }
     }); 
-
 
 
     // page 6 = contact
@@ -331,7 +320,6 @@ const pageSectionAnimation = () => {
             scrub: 1,
         }
     });
-
 
 
     // page 7 = Footer

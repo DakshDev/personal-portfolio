@@ -10,7 +10,11 @@
     "post:css": "npx postcss ./public/css/main.css -o ./public/css/dest/output.css --watch",
     "start": "npx concurrently \"npm run post:css\" \"npm run dev\""
   },
-  "browserslist": "> 1%, last 2 versions, Firefox ESR, not dead",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "browserslist": "^4.24.4",

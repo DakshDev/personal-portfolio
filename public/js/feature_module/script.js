@@ -59,21 +59,21 @@ export default ()=>{
     
     new ProjectShowCase(
         "snake game",
-        "https://www.techwyse.com/wp-content/uploads/2007/07/Web-Site-Development-Project-Approach.jpg",
+        "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
         "client",
         "2024",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.").exec();
 
     new ProjectShowCase(
         "Flappy Bird",
-        "https://cdn.wedevs.com/uploads/2021/04/Best-project-management-software-for-web-designers.png",
+        "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
         "personal",
         "2022",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.").exec();
 
     new ProjectShowCase(
         "Portfolio",
-        "https://kinsta.com/wp-content/uploads/2020/02/web-design-best-practices.jpg",
+        "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
         "client",
         "2023",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.").exec();

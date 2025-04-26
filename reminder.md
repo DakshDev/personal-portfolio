@@ -1,1 +1,1 @@
-border-raduis size is md only in whole portfolio
+border-raduis size is md in whole portfolio
