@@ -198,10 +198,17 @@
     <!-- ============================================== -->
                     <!-- PAGE 5 -->
     <!-- ============================================== -->
+    <!-- right arrow -->
+    <div page5_right_arrow class="flex justify-center items-center animate-pulse">
+      <div project_guid_right_arrow></div>
+      <h1 class="font_xxl staatliches-bold text-text_two_clr">Swipe Right</h1>
+      <div project_guid_right_arrow></div>
+    </div>
+    <!-- Project -->
     <div id="project" class="mainBoxDefaulStyle min-h-screen h-screen w-full relative overflow-hidden">
        <!-- Swiper -->
         <div class="swiper mySwiper relative top-[50%] translate-y-[-50%]">
-          <div id="project_box" class="swiper-wrapper flex flex-nowrap">
+          <div page5_projects id="project_box" class="swiper-wrapper flex flex-nowrap">
             <!-- here imported projects from script.js file -->
           </div>
         </div>
@@ -210,12 +217,12 @@
 
     <!-- ============================================== -->
                     <!-- PAGE 6 Contact Info -->
-    <!-- ============================================== -->    
+    <!-- ============================================== -->  
     <div id="contact" class="mainBoxDefaulStyle py-40 z-10 relative grid gap-20 content-start">
         <!-- Commo Heading -->
         <div><span class="common_heading">Contact</span></div>
 
-      <div class="flex md:justify-between gap-10 max-md:flex-col max-md:items-center w-full">
+      <div page6_animation class="flex md:justify-between gap-10 max-md:flex-col max-md:items-center w-full">
           <div id="contactform" class="grid gap-2.5 md:w-[50%] max-md:w-[500px]  max-sm:w-full">
             <div class="flex gap-2.5">
               <input type="text" id="userFirstName" placeholder="Enter you first name">
@@ -243,7 +250,7 @@
     <!-- ============================================== -->
                     <!-- PAGE 7 Footer -->
     <!-- ============================================== -->   
-    <footer id="page7" class="py-10 z-10 relative shadow-sm bg-black_two_clr">
+    <footer id="footer" class="py-10 z-10 relative shadow-sm bg-black_two_clr">
       <div class="absolute left-0 top-0 h-full w-full bg-black/30"></div>  
       <div class="w-full max-w-screen-xl relative z-10 mx-auto p-4 md:py-8">
           <div class="sm:flex sm:items-center sm:justify-between grid gap-5">
@@ -314,11 +321,13 @@
 
     // Cursor Moving Effect
     let cursor_main = document.getElementById("cursor_box");
-    window.addEventListener("mousemove", (e) => {
+    window.addEventListener("mousemove", (e) => mouseMovingAnimation(e));
+    window.addEventListener("mouseover", (e) => mouseMovingAnimation(e));
+    function mouseMovingAnimation(e){
       cursor_main.style.display = "inline-block";
       cursor_main.style.left = `${e.clientX}px`;
       cursor_main.style.top = `${e.clientY}px`;
-    });
+    }
     window.addEventListener("mouseout", (e) => {
       cursor_main.style.display = "none";
     });

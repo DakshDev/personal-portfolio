@@ -280,4 +280,70 @@ const pageSectionAnimation = () => {
         }
     });
 
+
+ 
+    // page 5
+    gsap.from(document.querySelector("[page5_right_arrow]").children,{
+        y: "25px",
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "[page5_right_arrow]",
+            // markers: true,
+            start: 'top 60%',
+            end: 'top 40%',
+            scrub: 1,
+        }
+    });
+    gsap.from(document.querySelector("[page5_projects]"),{
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "[page5_projects]",
+            // markers: true,
+            start: 'top 50%',
+            end: 'top 10%',
+            scrub: 1,
+        }
+    }); 
+
+
+
+    // page 6 = contact
+    gsap.from("#contact span.common_heading", {
+        opacity: 0,
+        top: "50px",
+        scrollTrigger: {
+            trigger: "#contact",
+            // markers: true,
+            start: 'top 50%',
+            end: 'top 25%',
+            scrub: 1,
+        }
+    });
+    gsap.from(document.querySelector("#contact [page6_animation]").children, {
+        y: "50px",
+        opacity: 0,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: "#contact [page6_animation]",
+            // markers: true,
+            start: 'top 60%',
+            end: 'top 40%',
+            scrub: 1,
+        }
+    });
+
+
+
+    // page 7 = Footer
+    gsap.from("#footer", {
+        opacity: 0,
+        y: "50px",
+        scrollTrigger: {
+            trigger: "#footer",
+            // markers: true,
+            start: 'top 90%',
+            end: 'top 80%',
+            scrub: 1,
+        }
+    });
 };
