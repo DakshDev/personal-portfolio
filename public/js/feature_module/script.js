@@ -74,17 +74,17 @@ export default ()=>{
 
     new ProjectShowCase(
         "Flappy Bird",
-        "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
+        "/assets/img/soon_project.webp",
         "personal",
-        "2022",
+        "2025",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.",
         "#").exec();
 
     new ProjectShowCase(
-        "Ecommerce",
-        "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
-        "client",
-        "2023",
+        "Ecommerce Website",
+        "/assets/img/soon_project.webp",
+        "personal",
+        "2025",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores  dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.",
         "#").exec();
     

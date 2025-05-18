@@ -51,7 +51,6 @@ user_passed_contact_info((userPassedDetail) => {
     })
     .then(raw => raw.json())
     .then(data => {
-        console.log("Your Mail", data);
         mainSendResetForm(data);
     })
     .catch(err => console.log("Got Some Error", err.message))
