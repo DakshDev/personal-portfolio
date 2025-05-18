@@ -289,8 +289,8 @@ const pageSectionAnimation = () => {
         scrollTrigger: {
             trigger: "[page5_projects]",
             // markers: true,
-            start: 'top 50%',
-            end: 'top 10%',
+            start: 'top 60%',
+            end: 'top 40%',
             scrub: 1,
         }
     }); 

@@ -5,12 +5,13 @@ import {project_box} from "../main.js"
 export default ()=>{
     
     class ProjectShowCase{
-        constructor(name,url,project,year,description){
+        constructor(name,url,project,year,description,link){
             this.name = name;
             this.url = url;
             this.project = project;
             this.year = year;
             this.description = description;
+            this.link = link
         }
 
         exec(){
@@ -39,6 +40,10 @@ export default ()=>{
                         <span class="lowercase montserrat_regular text-justify">${this.description}</span>
                     </div>
                   </div>
+                  
+                  <div class="flex justify-center items-center">
+                    <a target="_blank" class="w-1/2 text-center px-6 py-2 rounded-md font-semibold bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800" href="${this.link}">View Project</a>
+                  </div>
                 </div>
               </section>
             </div>
@@ -51,31 +56,36 @@ export default ()=>{
 
     
     new ProjectShowCase(
-        "todo app",
-        "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
+        "Atlas Tools",
+        "/assets/img/atlas_tools_project.webp",
         "personal",
-        "2021",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.").exec();
+        "2025",
+        "This project is a multi-functional utility web application designed to provide essential daily tools in one place. The goal is to enhance user productivity by offering simple, efficient, and user-friendly solutions to common tasks",
+        "https://atlas-tools.vercel.app/").exec();
     
     new ProjectShowCase(
         "snake game",
-        "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
+        "/assets/img/snake_game_project.webp",
         "client",
         "2024",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.").exec();
+        "This is a DOM-based game of Snake that I wrote in JavaScript over a decade ago. It was made to have sort of a nostalgic feel to it.",
+        "https://dakshdev.github.io/SnakeGame/"
+      ).exec();
 
     new ProjectShowCase(
         "Flappy Bird",
         "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
         "personal",
         "2022",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.").exec();
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.",
+        "#").exec();
 
     new ProjectShowCase(
-        "Portfolio",
+        "Ecommerce",
         "https://toggl.com/blog/wp-content/uploads/2021/05/how-to-create-a-website-project-plan.jpg",
         "client",
         "2023",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.").exec();
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores  dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.",
+        "#").exec();
     
 }

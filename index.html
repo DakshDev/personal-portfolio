@@ -199,15 +199,15 @@
                     <!-- PAGE 5 -->
     <!-- ============================================== -->
     <!-- right arrow -->
-    <div page5_right_arrow class="flex justify-center items-center animate-pulse">
-      <div project_guid_right_arrow></div>
-      <h1 class="font_xxl staatliches-bold text-text_two_clr">Swipe Right</h1>
-      <div project_guid_right_arrow></div>
+    <div page5_right_arrow class="flex justify-center items-center">
+      <div project_guid_right_arrow class="size-32 max-md:size-28 max-sm:size-20"></div>
+      <h1 class="uppercase text-[80px] leading-[80px] max-md:text-[60px] max-md:leading-[60px]; max-sm:text-[40px] max-sm:leading-[40px]; staatliches-bold">Swipe Right</h1>
+      <div project_guid_right_arrow class="size-32 max-md:size-28 max-sm:size-20"></div>
     </div>
     <!-- Project -->
-    <div id="project" class="mainBoxDefaulStyle min-h-screen h-screen w-full relative overflow-hidden">
+    <div id="project" class="mainBoxDefaulStyle w-full relative overflow-hidden">
        <!-- Swiper -->
-        <div class="swiper mySwiper relative top-[50%] translate-y-[-50%]">
+        <div class="swiper mySwiper relative">
           <div page5_projects id="project_box" class="swiper-wrapper flex flex-nowrap">
             <!-- here imported projects from script.js file -->
           </div>
@@ -328,6 +328,7 @@
       cursor_main.style.left = `${e.clientX}px`;
       cursor_main.style.top = `${e.clientY}px`;
     }
+    cursor_main.style.display = "none";
     window.addEventListener("mouseout", (e) => {
       cursor_main.style.display = "none";
     });
