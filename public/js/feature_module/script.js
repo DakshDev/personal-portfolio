@@ -54,6 +54,14 @@ export default ()=>{
         };
     };
 
+
+    new ProjectShowCase(
+      "EMS",
+      "/assets/img/ems-project.webp",
+      "personal",
+      "2025",
+      "This Employee Management System (EMS) lets you add, remove, and assign tasks to employees. It has two dashboards: Admin (full access) and Employee (read-only with task completion access).",
+      "https://ems-prototype.vercel.app/").exec();
     
     new ProjectShowCase(
         "Atlas Tools",
@@ -72,13 +80,6 @@ export default ()=>{
         "https://dakshdev.github.io/SnakeGame/"
       ).exec();
 
-    new ProjectShowCase(
-        "Flappy Bird",
-        "/assets/img/soon_project.webp",
-        "personal",
-        "2025",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.",
-        "#").exec();
 
     new ProjectShowCase(
         "Ecommerce Website",
