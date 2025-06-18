@@ -42,7 +42,9 @@ export default ()=>{
                   </div>
                   
                   <div class="flex justify-center items-center">
-                    <a target="_blank" class="w-1/2 text-center px-6 py-2 rounded-md font-semibold bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800" href="${this.link}">View Project</a>
+                    <a target="_blank" class="flex gap-5 items-center justify-between w-fit text-center px-6 py-2 rounded-md font-semibold bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800" href="${this.link}">View Project 
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="15px" width="15px"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>
+                    </a>
                   </div>
                 </div>
               </section>
@@ -55,13 +57,17 @@ export default ()=>{
     };
 
 
+
     new ProjectShowCase(
-      "EMS",
+      "EM System",
       "/assets/img/ems-project.webp",
       "personal",
       "2025",
-      "This Employee Management System (EMS) lets you add, remove, and assign tasks to employees. It has two dashboards: Admin (full access) and Employee (read-only with task completion access).",
-      "https://ems-prototype.vercel.app/").exec();
+      `Developed using React.js, Tailwind, Node.js, Express.js, and Firebase.
+Implemented ems with real-time updates and a secure login system.
+Implemented CRUD operations with Firebase as the database.
+Integrated send email to employees.`,
+      "https://ems-cloudbased.vercel.app/").exec();
     
     new ProjectShowCase(
         "Atlas Tools",
@@ -87,6 +93,6 @@ export default ()=>{
         "personal",
         "2025",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illo commodi quaerat maiores  dolorem ipsa, ducimus repudiandae impedit dolor ipsam molestias eos.",
-        "#").exec();
+        "").exec();
     
 }
